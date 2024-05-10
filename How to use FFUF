@@ -1,0 +1,36 @@
+
+
+
+
+
+How to use and install FFUf
+
+Fuzzing is the automatic process of giving random input to an application to look for any errors or any unexpected behavior. But finding hidden directories and files on a web server can also be categorized under fuzzing
+
+git hub repo :  git clone https://github.com/ffuf/ffuf/releases
+
+it can also be install from go 
+
+go get github.com/ffuf/ffuf
+
+
+update dependence file in kali if needed
+
+location : /etc/apt/sources.list 
+
+Command to use FFUf
+
+ ffuf -w /usr/share/dirbuster/wordlists/directory-list-1.0.txt -u https://www.icicidirect.com/FUZZ -e .aspx,.html,.php,.txt -mc all -fs 42 -c -v 
+ 
+ 
+ -w : for wordlist [ without wordlist it wont work
+ 
+ -u : for target
+ 
+ -e : for  Comma separated list of extensions. Extends FUZZ keyword.
+ 
+ -mc : for Match HTTP status codes, or "all" for everything. (default: 200-299,301,302,307,401,403,405,500)
+ 
+ -c : for color coding in output
+ 
+ -v : for Verbose
